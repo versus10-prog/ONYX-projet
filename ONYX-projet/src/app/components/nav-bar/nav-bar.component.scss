@@ -1,0 +1,21 @@
+// nav-bar.component.scss
+
+div {
+    color: #369;
+    padding: 10px; // Marge intérieure pour l'espace autour des éléments
+    
+  
+    nav {
+      display: flex; 
+      justify-content: space-around;
+  
+      h2 {
+        cursor: pointer; 
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,12 @@
+div{
+    color:#369 ;
+
+    h2 {
+        cursor: pointer; 
+    
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+}
+
