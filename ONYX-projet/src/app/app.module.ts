@@ -5,25 +5,24 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
-import { GameComponent } from './components/game/game.component';
 import { ScoreListComponent } from './components/score-list/score-list.component';
 import { ScoreDetailComponent } from './components/score-detail/score-detail.component';
-import { HomepageComponent } from './components/homePage/homepage/homepage.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { GameModuleModule } from './components/game/game-module.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    GameComponent,
     ScoreListComponent,
     ScoreDetailComponent,
-    HomepageComponent,
-    NavBarComponent
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    GameModuleModule
   ],
   providers: [
     provideClientHydration()

@@ -1,3 +1,16 @@
 <div>
     <app-nav-bar></app-nav-bar>
+    <div *ngIf="contenuePage === 1" (click)="startGame()">
+        <app-start-game></app-start-game>
+    </div>
+
+    <div *ngIf="contenuePage === 2">
+        <app-jeux></app-jeux>
+    </div>
+
+    <div *ngIf="contenuePage === 3">
+        <app-end-game></app-end-game>
+    </div>
+
+
 </div>
