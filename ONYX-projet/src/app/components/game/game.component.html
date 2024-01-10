@@ -1,16 +1,48 @@
 <div>
     <app-nav-bar></app-nav-bar>
-    <div *ngIf="contenuePage === 1" (click)="startGame()">
-        <app-start-game></app-start-game>
+    <div>
+        <div id="start" *ngIf="contenuePage === 1" (click)="startGame()">
+            <img [src]="image" alt="Click Me">
+
+        </div>
+
+        <div id="game" *ngIf="contenuePage === 2">
+
+
+            <div id="HG">
+                <img (click)="next()" [src]="image" *ngIf="position === 0">
+            </div>
+            <div id="HM">
+                <img (click)="next()" [src]="image" *ngIf="position === 1">
+            </div>
+            <div id="HD">
+                <img (click)="next()" [src]="image" *ngIf="position === 2">
+            </div>
+            <div id="MG">
+                <img (click)="next()" [src]="image" *ngIf="position === 3">
+            </div>
+            <div id="MM">
+                <img (click)="next()" [src]="image" *ngIf="position === 4">
+            </div>
+            <div id="MD">
+                <img (click)="next()" [src]="image" *ngIf="position === 5">
+            </div>
+            <div id="BG">
+                <img (click)="next()" [src]="image" *ngIf="position === 6">
+            </div>
+            <div id="BM">
+                <img (click)="next()" [src]="image" *ngIf="position === 7">
+            </div>
+            <div id="BD">
+                <img (click)="next()" [src]="image" *ngIf="position === 8">
+            </div>
+
+        </div>
+
+        <div id="end" *ngIf="contenuePage === 3">
+
+        </div>
+
+
     </div>
-
-    <div *ngIf="contenuePage === 2">
-        <app-jeux></app-jeux>
-    </div>
-
-    <div *ngIf="contenuePage === 3">
-        <app-end-game></app-end-game>
-    </div>
-
-
 </div>
