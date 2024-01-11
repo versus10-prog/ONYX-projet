@@ -18,7 +18,8 @@ export class GameComponent {
   time: Date = new Date();
   compteur: number = 0;
   numPart: number = -1;
-  dataModel: aveBestModel={average: -1,  best: -1,numPart: -1 };
+  average: number = -1;
+  best : number = -1;
 
 
   constructor(private router: Router, private http: HttpClient) { }
@@ -45,8 +46,13 @@ export class GameComponent {
     else{
       
       this.endGame(this.numPart);
-      this.router.navigate(['/scores']);
+      //this.router.navigate(['/scores']);
+      this.contenuePage = 3;
     }
+  }
+
+  rejouer(){
+    window.location.reload();
   }
 
   // GAMEH
@@ -131,7 +137,8 @@ export class GameComponent {
       (response) => {
         console.log('Réponse de l\'API :', response);
         
-        
+        this.average = response.average;
+        this.best = response.best;
         const apiUrl2 = 'https://localhost:7299/api/Gameh';
 
         this.http.put(apiUrl2, response).subscribe(

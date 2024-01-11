@@ -39,5 +39,26 @@
 
         </div>
 
+        <div id="end" *ngIf="contenuePage === 3">
+            <H2>Votre Scores</H2>
+            <table>
+                <thead>
+                    <tr>
+
+                        <td>Average Time</td>
+                        <td>Best Time</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{average}}</td>
+                        <td>{{best}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button (click) = 'rejouer()'>Rejouer</button>
+        </div>
+
     </div>
 </div>
