@@ -1,1 +1,28 @@
-<p>score-detail works!</p>
+<div>
+    <app-nav-bar></app-nav-bar>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Classement</td>
+                <td>Temps Moyen</td>
+                <td>Meilleur Memps</td>
+                <td>Date</td>
+                <td>Pseudo</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let game of scores; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{ game[1] }}</td>
+                <td>{{ game[2] }}</td>
+                <td>{{ game[3] | date: 'yyyy-MM-dd'}}</td>
+                <td>{{ game[0] }}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

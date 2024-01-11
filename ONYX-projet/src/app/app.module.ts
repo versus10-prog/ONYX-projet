@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ScoreDetailComponent } from './components/score-detail/score-detail.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { GameModuleModule } from './components/game/game-module.module';
+import { GameModule } from './components/game/game.module';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 
@@ -21,7 +21,7 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    GameModuleModule
+    GameModule
   ],
   providers: [
     provideClientHydration()

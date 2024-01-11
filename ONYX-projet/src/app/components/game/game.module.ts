@@ -9,7 +9,7 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
 @NgModule({
   declarations: [
     GameComponent,
-    NavBarComponent
+    NavBarComponent,
   ],
   imports: [
     CommonModule,
@@ -20,4 +20,4 @@ import { NavBarComponent } from '../nav-bar/nav-bar.component';
     NavBarComponent
   ]
 })
-export class GameModuleModule { }
+export class GameModule { }

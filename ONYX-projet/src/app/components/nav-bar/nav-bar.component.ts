@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrl: './nav-bar.component.scss'
+  styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
 
@@ -29,9 +29,27 @@ export class NavBarComponent {
     }
 
   }
-  redirection() {
+  redirectionGame() {
     if (this.isConect() == true) {
       this.router.navigate(['/game'])
+    }
+    else {
+      this.router.navigate(['/login'])
+    }
+  }
+  redirectionScores() {
+
+    this.router.navigate(['/scores'])
+  }
+  redirectionConnect() {
+
+    if (this.isConect() == true) {
+      const deco = window.confirm("Vous allez etre deconnecté, êtes vous sur ?");
+      if (deco == true) {
+        localStorage.removeItem("userName");
+        this.router.navigate(['/login'])
+        console.log("deconnexion");
+      }
     }
     else {
       this.router.navigate(['/login'])
